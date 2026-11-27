@@ -1,0 +1,33 @@
+# OS & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Node / Frontend
+node_modules/
+dist/
+build/
+.npm/
+*.log
+.playwright-mcp/
+*.tmp
+*.bak
+
+# Rust / Tauri
+target/
+src-tauri/target/
+release/
+
+# Environment / Secrets & Keys
+.env
+.env.local
+.env.*
+!.env.example
+*.local
+*.key
+*.pem
+*.p12
+*.pfx
+minisign.key
+mirror_assets/

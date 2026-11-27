@@ -1,0 +1,122 @@
+[
+  {
+    "name": "ArduinoJson",
+    "author": "Benoit Blanchon",
+    "sentence": "An efficient and elegant JSON library for Arduino and IoT.",
+    "paragraph": "ArduinoJson is a C++ JSON library for Arduino and other microcontrollers. Supports JSON parsing, serialization, and MessagePack.",
+    "website": "https://arduinojson.org",
+    "category": "Data Processing",
+    "latest_version": "7.2.1",
+    "available_versions": ["7.2.1", "7.2.0", "7.1.0", "7.0.4", "6.21.5", "6.21.4", "6.21.3", "6.20.0"]
+  },
+  {
+    "name": "Adafruit NeoPixel",
+    "author": "Adafruit",
+    "sentence": "Arduino library for controlling single-wire-based LED pixels and strip.",
+    "paragraph": "Fast, hardware-optimized library for WS2811, WS2812, WS2812B, WS2813 and SK6812 RGB / RGBW LED pixels.",
+    "website": "https://github.com/adafruit/Adafruit_NeoPixel",
+    "category": "Display",
+    "latest_version": "1.15.4",
+    "available_versions": ["1.15.4", "1.15.3", "1.15.2", "1.15.1", "1.15.0", "1.14.0", "1.13.0"]
+  },
+  {
+    "name": "PubSubClient",
+    "author": "Nick O'Leary",
+    "sentence": "A client library for MQTT messaging on Arduino.",
+    "paragraph": "Provides simple publish/subscribe messaging with a server that supports MQTT.",
+    "website": "https://pubsubclient.knolleary.net",
+    "category": "Communication",
+    "latest_version": "2.8.0",
+    "available_versions": ["2.8.0", "2.7.0", "2.6.0"]
+  },
+  {
+    "name": "WiFiManager",
+    "author": "tzapu",
+    "sentence": "ESP8266 & ESP32 WiFi Connection manager with captive portal.",
+    "paragraph": "ESP8266 and ESP32 WiFi connection manager with captive portal for SSID/password entry without hardcoding secrets.",
+    "website": "https://github.com/tzapu/WiFiManager",
+    "category": "Communication",
+    "latest_version": "2.0.17",
+    "available_versions": ["2.0.17", "2.0.16-rc.2", "2.0.15-rc.1", "2.0.14-beta", "0.16.0"]
+  },
+  {
+    "name": "FastLED",
+    "author": "Daniel Garcia",
+    "sentence": "Multi-platform library for controlling addressable LEDs.",
+    "paragraph": "High-performance LED animation library supporting WS2812, APA102, LPD8806, and dozens of other addressable LED controllers.",
+    "website": "https://fastled.io",
+    "category": "Display",
+    "latest_version": "3.9.13",
+    "available_versions": ["3.9.13", "3.9.12", "3.9.11", "3.9.10", "3.9.9", "3.9.8", "3.9.7", "3.9.0"]
+  },
+  {
+    "name": "Adafruit GFX Library",
+    "author": "Adafruit",
+    "sentence": "Adafruit GFX graphics core library for displays.",
+    "paragraph": "Core graphics library providing primitives (points, lines, circles, fonts) for OLED, TFT, and e-paper displays.",
+    "website": "https://github.com/adafruit/Adafruit-GFX-Library",
+    "category": "Display",
+    "latest_version": "1.12.6",
+    "available_versions": ["1.12.6", "1.12.5", "1.12.4", "1.12.3", "1.12.2", "1.12.1", "1.12.0", "1.11.9"]
+  },
+  {
+    "name": "DHT sensor library",
+    "author": "Adafruit",
+    "sentence": "Arduino library for DHT11, DHT22, etc Temp & Humidity Sensors.",
+    "paragraph": "Unified sensor driver for DHT series digital relative humidity and temperature sensors.",
+    "website": "https://github.com/adafruit/DHT-sensor-library",
+    "category": "Sensors",
+    "latest_version": "1.4.6",
+    "available_versions": ["1.4.6", "1.4.5", "1.4.4", "1.4.3", "1.4.2", "1.4.1", "1.4.0"]
+  },
+  {
+    "name": "TFT_eSPI",
+    "author": "Bodmer",
+    "sentence": "Blazing fast SPI library for ESP8266 and ESP32 displays.",
+    "paragraph": "High-speed graphics library for SPI displays including ST7789, ILI9341, ILI9488, GC9A01 with DMA acceleration.",
+    "website": "https://github.com/Bodmer/TFT_eSPI",
+    "category": "Display",
+    "latest_version": "2.5.43",
+    "available_versions": ["2.5.43", "2.5.42", "2.5.41", "2.5.40", "2.5.34", "2.5.0"]
+  },
+  {
+    "name": "ESPAsyncWebServer",
+    "author": "lacamera",
+    "sentence": "Asynchronous HTTP and WebSocket server for ESP8266 & ESP32.",
+    "paragraph": "Asynchronous web server designed for high concurrency and REST APIs on ESP microcontrollers.",
+    "website": "https://github.com/me-no-dev/ESPAsyncWebServer",
+    "category": "Communication",
+    "latest_version": "3.7.0",
+    "available_versions": ["3.7.0", "3.6.0", "3.5.0", "3.4.0", "3.3.0"]
+  },
+  {
+    "name": "Servo",
+    "author": "Michael Margolis",
+    "sentence": "Allows Arduino boards to control RC servo motors.",
+    "paragraph": "Controls RC servo motors using hardware timers on standard Arduino boards.",
+    "website": "https://www.arduino.cc/en/Reference/Servo",
+    "category": "Device Control",
+    "latest_version": "1.2.2",
+    "available_versions": ["1.2.2", "1.2.1", "1.2.0", "1.1.8", "1.1.7"]
+  },
+  {
+    "name": "LiquidCrystal I2C",
+    "author": "Frank de Brabander",
+    "sentence": "Drive HD44780 LCD displays via PCF8574 I2C adapter.",
+    "paragraph": "Control character LCDs using only two I2C pins instead of 6 to 10 digital IO pins.",
+    "website": "https://github.com/johnrickman/LiquidCrystal_I2C",
+    "category": "Display",
+    "latest_version": "1.1.2",
+    "available_versions": ["1.1.2", "1.1.1", "1.1.0"]
+  },
+  {
+    "name": "Bounce2",
+    "author": "Thomas O Fredericks",
+    "sentence": "Debouncing library for Arduino and Wiring.",
+    "paragraph": "Debounce noisy mechanical switches and buttons with edge detection and interval filters.",
+    "website": "https://github.com/thomasfredericks/Bounce2",
+    "category": "Signal Input/Output",
+    "latest_version": "2.71",
+    "available_versions": ["2.71", "2.70", "2.60", "2.57"]
+  }
+]
