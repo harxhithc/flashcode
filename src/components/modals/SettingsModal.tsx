@@ -39,7 +39,7 @@ interface SettingsModalProps {
 
 export const SettingsModal: Component<SettingsModalProps> = (props) => {
   const state = () => updateState();
-  const [appVersion, setAppVersion] = createSignal("0.1.0");
+  const [appVersion, setAppVersion] = createSignal("0.1.1");
   const [showUninstallPanel, setShowUninstallPanel] = createSignal(false);
   const [manifest, setManifest] = createSignal<UninstallManifest | null>(null);
   const [confirmText, setConfirmText] = createSignal("");

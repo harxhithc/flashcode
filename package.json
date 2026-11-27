@@ -1,6 +1,6 @@
 {
   "name": "flashcode",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fast, minimalist, intelligent embedded systems IDE",
   "license": "GPL-3.0",
   "type": "module",
