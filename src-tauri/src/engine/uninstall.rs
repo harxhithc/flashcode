@@ -76,14 +76,16 @@ pub fn detect_uninstall_manifest() -> UninstallManifest {
         .or_else(|| exe.as_ref().map(|p| p.to_string_lossy().to_string()))
         .unwrap_or_default();
 
-    let is_deb_package = std::process::Command::new("dpkg-query")
-        .args(["-W", "-f=${Status}", "flashcode"])
-        .output()
-        .map(|o| {
-            o.status.success()
-                && String::from_utf8_lossy(&o.stdout).contains("install ok installed")
-        })
-        .unwrap_or(false);
+    let is_deb_package = ["flash-code", "flashcode"].iter().any(|pkg| {
+        std::process::Command::new("dpkg-query")
+            .args(["-W", "-f=${Status}", pkg])
+            .output()
+            .map(|o| {
+                o.status.success()
+                    && String::from_utf8_lossy(&o.stdout).contains("install ok installed")
+            })
+            .unwrap_or(false)
+    });
 
     let install_type = if is_dev_build {
         "Development Build (Protected)".to_string()
@@ -255,7 +257,7 @@ pub fn build_unix_uninstall_script(pid: u32, manifest: &UninstallManifest) -> St
 
     if manifest.is_deb_package && !manifest.is_dev_build {
         lines.push(
-            "if command -v pkexec >/dev/null 2>&1; then pkexec sh -c 'apt-get purge -y flashcode || dpkg --purge flashcode' >/dev/null 2>&1 || true; fi"
+            "if command -v pkexec >/dev/null 2>&1; then pkexec sh -c 'for p in flash-code flashcode; do dpkg-query -W -f=\"${Status}\" \"$p\" 2>/dev/null | grep -q \"install ok installed\" && (apt-get purge -y \"$p\" || dpkg --purge \"$p\"); done' >/dev/null 2>&1 || true; fi"
                 .to_string(),
         );
     }

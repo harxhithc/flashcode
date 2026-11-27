@@ -93,12 +93,18 @@ pub async fn create_new_window(
         "index.html".to_string()
     };
 
-    let builder = WebviewWindowBuilder::new(&app, &label, WebviewUrl::App(url_str.into()))
+    let mut builder = WebviewWindowBuilder::new(&app, &label, WebviewUrl::App(url_str.into()))
         .title("FlashCode")
         .inner_size(1280.0, 800.0)
         .min_inner_size(960.0, 600.0)
         .resizable(true)
         .maximized(false);
+
+    if let Some(icon) = crate::app_window_icon() {
+        builder = builder
+            .icon(icon)
+            .map_err(|e| format!("Failed to apply window icon: {}", e))?;
+    }
 
     let window = builder.build().map_err(|e| format!("Failed to create new window: {}", e))?;
     let _ = window.show();

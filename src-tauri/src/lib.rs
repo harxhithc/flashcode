@@ -13,9 +13,23 @@ use commands::{
     transfer_port_lock, upload_sketch,
 };
 
+use tauri::Manager;
+
+/// Decode the embedded high-resolution PNG window icon so Linux AppImage/X11 windows
+/// display a crisp taskbar and titlebar icon even without system-wide installation.
+pub fn app_window_icon() -> Option<tauri::image::Image<'static>> {
+    tauri::image::Image::from_bytes(include_bytes!("../icons/icon.png")).ok()
+}
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
+        .setup(|app| {
+            if let (Some(win), Some(icon)) = (app.get_webview_window("main"), app_window_icon()) {
+                let _ = win.set_icon(icon);
+            }
+            Ok(())
+        })
         .plugin(tauri_plugin_opener::init())
         .plugin(tauri_plugin_process::init())
         .plugin(tauri_plugin_updater::Builder::new().build())
